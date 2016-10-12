@@ -1,6 +1,9 @@
-# DemoApp
+# Limtoc
 
-This project was generated with [angular-cli](https://github.com/angular/angular-cli) version 1.0.0-beta.16.
+This is a boilerplate application using Angular 2 and Material Design. It contains a sidebar 
+menu, a tool bar with menus etc. It loosely follows the look of Google Docs https://docs.google.com/
+
+Plans to 
 
 ## Development server
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.

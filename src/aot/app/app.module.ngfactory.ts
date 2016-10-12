@@ -88,7 +88,7 @@ import * as import80 from '@angular/core/src/change_detection/differs/iterable_d
 import * as import81 from '@angular/core/src/change_detection/differs/keyvalue_differs';
 import * as import82 from '@angular/http/src/interfaces';
 import * as import83 from '@angular/http/src/http';
-class MaterialAppModuleInjector extends import0.NgModuleInjector<import1.MaterialAppModule> {
+class AppModuleInjector extends import0.NgModuleInjector<import1.AppModule> {
   _CommonModule_0:import2.CommonModule;
   _ApplicationModule_1:import3.ApplicationModule;
   _BrowserModule_2:import4.BrowserModule;
@@ -123,7 +123,7 @@ class MaterialAppModuleInjector extends import0.NgModuleInjector<import1.Materia
   _MdSnackBarModule_31:import33.MdSnackBarModule;
   _MdTooltipModule_32:import34.MdTooltipModule;
   _MaterialRootModule_33:import35.MaterialRootModule;
-  _MaterialAppModule_34:import1.MaterialAppModule;
+  _AppModule_34:import1.AppModule;
   __LOCALE_ID_35:any;
   __NgLocalization_36:import36.NgLocaleLocalization;
   _ErrorHandler_37:any;
@@ -171,9 +171,9 @@ class MaterialAppModuleInjector extends import0.NgModuleInjector<import1.Materia
       import63.MdSnackBarContainerNgFactory,
       import64.SimpleSnackBarNgFactory,
       import65.TooltipComponentNgFactory,
-      import66.Material2AppAppComponentNgFactory
+      import66.AppComponentNgFactory
     ]
-    ,[import66.Material2AppAppComponentNgFactory]);
+    ,[import66.AppComponentNgFactory]);
   }
   get _LOCALE_ID_35():any {
     if ((this.__LOCALE_ID_35 == (null as any))) { (this.__LOCALE_ID_35 = 'en-US'); }
@@ -328,7 +328,7 @@ class MaterialAppModuleInjector extends import0.NgModuleInjector<import1.Materia
     if ((this.__MdSnackBar_75 == (null as any))) { (this.__MdSnackBar_75 = new import33.MdSnackBar(this._Overlay_72,this._MdLiveAnnouncer_66)); }
     return this.__MdSnackBar_75;
   }
-  createInternal():import1.MaterialAppModule {
+  createInternal():import1.AppModule {
     this._CommonModule_0 = new import2.CommonModule();
     this._ApplicationModule_1 = new import3.ApplicationModule();
     this._BrowserModule_2 = new import4.BrowserModule(this.parent.get(import4.BrowserModule,(null as any)));
@@ -363,12 +363,12 @@ class MaterialAppModuleInjector extends import0.NgModuleInjector<import1.Materia
     this._MdSnackBarModule_31 = new import33.MdSnackBarModule();
     this._MdTooltipModule_32 = new import34.MdTooltipModule();
     this._MaterialRootModule_33 = new import35.MaterialRootModule();
-    this._MaterialAppModule_34 = new import1.MaterialAppModule();
+    this._AppModule_34 = new import1.AppModule();
     this._ErrorHandler_37 = import4.errorHandler();
     this._ApplicationInitStatus_38 = new import37.ApplicationInitStatus(this.parent.get(import37.APP_INITIALIZER,(null as any)));
     this._Testability_39 = new import38.Testability(this.parent.get(import71.NgZone));
     this._ApplicationRef__40 = new import39.ApplicationRef_(this.parent.get(import71.NgZone),this.parent.get(import73.Console),this,this._ErrorHandler_37,this,this._ApplicationInitStatus_38,this.parent.get(import38.TestabilityRegistry,(null as any)),this._Testability_39);
-    return this._MaterialAppModule_34;
+    return this._AppModule_34;
   }
   getInternal(token:any,notFoundResult:any):any {
     if ((token === import2.CommonModule)) { return this._CommonModule_0; }
@@ -405,7 +405,7 @@ class MaterialAppModuleInjector extends import0.NgModuleInjector<import1.Materia
     if ((token === import33.MdSnackBarModule)) { return this._MdSnackBarModule_31; }
     if ((token === import34.MdTooltipModule)) { return this._MdTooltipModule_32; }
     if ((token === import35.MaterialRootModule)) { return this._MaterialRootModule_33; }
-    if ((token === import1.MaterialAppModule)) { return this._MaterialAppModule_34; }
+    if ((token === import1.AppModule)) { return this._AppModule_34; }
     if ((token === import74.LOCALE_ID)) { return this._LOCALE_ID_35; }
     if ((token === import36.NgLocalization)) { return this._NgLocalization_36; }
     if ((token === import75.ErrorHandler)) { return this._ErrorHandler_37; }
@@ -453,4 +453,4 @@ class MaterialAppModuleInjector extends import0.NgModuleInjector<import1.Materia
     this._ApplicationRef__40.ngOnDestroy();
   }
 }
-export const MaterialAppModuleNgFactory:import0.NgModuleFactory<import1.MaterialAppModule> = new import0.NgModuleFactory(MaterialAppModuleInjector,import1.MaterialAppModule);
+export const AppModuleNgFactory:import0.NgModuleFactory<import1.AppModule> = new import0.NgModuleFactory(AppModuleInjector,import1.AppModule);

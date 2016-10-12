@@ -1,14 +1,16 @@
 import {NgModule} from '@angular/core';
 import {BrowserModule} from '@angular/platform-browser';
 import {MaterialModule} from '@angular/material';
-import {Material2AppAppComponent} from './app.component';
+import {AppComponent} from './app.component';
+import {SideNavMenuComponent} from './sidenav-menu.component';
+import { RabbitComponent } from './rabbit/rabbit.component';
 
 @NgModule({
   imports: [
     BrowserModule,
     MaterialModule.forRoot(),
   ],
-  declarations: [Material2AppAppComponent],
-  bootstrap: [Material2AppAppComponent],
+  declarations: [AppComponent, SideNavMenuComponent, RabbitComponent],
+  bootstrap: [AppComponent],
 })
-export class MaterialAppModule { }
+export class AppModule { }

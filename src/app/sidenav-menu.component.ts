@@ -2,11 +2,11 @@ import {Component} from '@angular/core';
 import { NavigationService } from './navigation.service';
 
 @Component({
-  selector: 'app-root',
-  templateUrl: 'app.component.html',
-  styleUrls: ['app.component.css'],
+  selector: 'sidenav-menu',
+  templateUrl: 'sidenav-menu.component.html',
+  styleUrls: ['sidenav-menu.component.css'],
 })
-export class AppComponent {
+export class SideNavMenuComponent {
   isDarkTheme: boolean = false;
 
   foods: any[] = [

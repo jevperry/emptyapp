@@ -1,10 +1,10 @@
-import { DemoAppPage } from './app.po';
+import { Md2Page } from './app.po';
 
-describe('demo-app App', function() {
-  let page: DemoAppPage;
+describe('md2 App', function() {
+  let page: Md2Page;
 
   beforeEach(() => {
-    page = new DemoAppPage();
+    page = new Md2Page();
   });
 
   it('should display message saying app works', () => {
