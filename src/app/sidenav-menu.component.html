@@ -1,10 +1,10 @@
-<div>Hello</div>
-
 <nav>
     <div>
-        <a routerLink="/md1" routerLinkActive="active">MD1</a>
+        <a routerLink="/md1" routerLinkActive="active" (click)="clickLink()">MD1</a>
     </div>
     <div>
-        <a routerLink="/md2" routerLinkActive="active">MD2</a>
+        <a routerLink="/md2" routerLinkActive="active" (click)="clickLink()">MD2</a>
     </div>
 </nav>
+
+parent {{parent.opened}}

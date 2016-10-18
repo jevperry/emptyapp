@@ -1,7 +1,7 @@
 <md-sidenav-layout [class.m2app-dark]="isDarkTheme">
 
-  <md-sidenav #sidenav mode="push" class="app-sidenav" opened1="true">
-    <sidenav-menu></sidenav-menu>
+  <md-sidenav #sidenav mode="push" class="app-sidenav">
+    <sidenav-menu [parent]="sidenav"></sidenav-menu>
   </md-sidenav>
 
   <md-toolbar color="primary">
@@ -9,7 +9,7 @@
       <i class="material-icons app-toolbar-menu">menu</i>
     </button>
 
-    {{title}}
+    {{title}} 
 
     <span class="app-toolbar-filler"></span>
     <button md-button (click)="isDarkTheme = !isDarkTheme">TOGGLE DARK THEME</button>
