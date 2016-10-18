@@ -1,8 +1,8 @@
-import { Injectable }    from '@angular/core';
+import { Injectable } from '@angular/core';
 
 @Injectable()
 export class NavigationService {
-  
+
   private nav = [{
         id: 'dashboard',
         title: 'Dashboard',
@@ -81,10 +81,7 @@ export class NavigationService {
         }],
     }];
 
-  constructor() { }
 
-  getNav() {
-    return this.nav;  
-  }
+  constructor() { }
 
 }
