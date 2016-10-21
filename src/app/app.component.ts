@@ -1,7 +1,6 @@
 import { Component } from '@angular/core';
-import {SideNavService} from './side-nav.service';
-
-console.log(SideNavService);
+import { AppService } from '.';
+import { BannerService } from './banner';
 
 @Component({
     selector: 'app-root',
@@ -11,10 +10,12 @@ console.log(SideNavService);
 export class AppComponent {
   
   title = 'Empty App';
+  showBanner = true;
 
-  constructor (private sideNavService: SideNavService){}
-  
-  isNavOpen() {
-   return this.sideNavService.isNavOpen();
+  constructor (private bannerService: BannerService){}
+
+  toggleBanner() {
+    this.bannerService.toggle();
   }
+
 }

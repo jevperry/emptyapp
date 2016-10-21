@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 
 @Injectable()
-export class SideNavService {
+export class AppService {
 
   private open:boolean = false;
 
