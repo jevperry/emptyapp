@@ -1,8 +1,14 @@
 body {
     margin: 0;
+    box-sizing: border-box;
 }
 
 md-toolbar {
     padding-left:0 !important;
     padding-right:0 !important;
+}
+
+
+md-progress-bar {
+    padding: 10px;
 }
