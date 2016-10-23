@@ -1,4 +1,4 @@
-# Limtoc
+# EmptyApp
 
 This is a boilerplate application using Angular 2 and Material Design. It contains a sidebar 
 menu, a tool bar with menus etc. It loosely follows the look of Google Docs https://docs.google.com/
