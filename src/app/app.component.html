@@ -17,14 +17,14 @@
       <img style="width:40px;height:40px;border-radius:50%" 
       src="https://s.gravatar.com/avatar/f850593bdae3cb1c8c535b4acfdfdb98?s=80">      
     </button>
-    <md-menu x-position="before" #menu="mdMenu">
+    <md-menu x-position="before" y-position="below" #menu="mdMenu">
       <button md-menu-item (click)="toggleBanner()">Toggle banner</button>
       <button md-menu-item (click)="isDarkTheme = !isDarkTheme">Toggle theme</button>
       <button md-menu-item>Log out</button>
     </md-menu>
   </md-toolbar>
 
-  <md-tab-group [selectedIndex]="1">
+  <md-tab-group [selectedIndex]="1"> 
     <md-tab>
       <template md-tab-label>
         Earth

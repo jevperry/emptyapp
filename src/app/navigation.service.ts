@@ -7,14 +7,14 @@ export class NavigationService {
         id: 'dashboard',
         title: 'Dashboard',
         icon: '',
-        icontype: '', 
+        icontype: '',
         iconcolor: '',
-        iconcolortype: '',      
-    },{
+        iconcolortype: '',
+    }, {
         id: 'section_1',
         title: 'Section 1',
         icon: '',
-        icontype: '', 
+        icontype: '',
         iconcolor: '',
         iconcolortype: '',
         children: [{
@@ -37,7 +37,7 @@ export class NavigationService {
         id: 'section_2',
         title: 'Section 2',
         icon: '',
-        icontype: '', 
+        icontype: '',
         iconcolor: '',
         iconcolortype: '',
         children: [{
@@ -60,7 +60,7 @@ export class NavigationService {
         id: 'section_3',
         title: 'Section 3',
         icon: '',
-        icontype: '', 
+        icontype: '',
         iconcolor: '',
         iconcolortype: '',
         children: [{
