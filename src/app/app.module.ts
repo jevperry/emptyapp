@@ -4,7 +4,7 @@ import { MaterialModule } from '@angular/material';
 
 import { AppService } from '.';  
 import { BannerService } from './banner';  
-import { NavigationService } from './navigation.service';
+import { NavigationService } from './navigation';
 
 import { AppComponent } from '.';
 import { BannerComponent } from './banner/banner.component';

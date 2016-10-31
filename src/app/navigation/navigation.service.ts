@@ -82,6 +82,11 @@ export class NavigationService {
     }];
 
 
-  constructor() { }
+  constructor() { 
+  }
+
+  getNav() {
+    return this.nav;
+  }  
 
 }

@@ -16,17 +16,15 @@ export class TagService {
 
     this.ops = {
       
-      hasAny: (target, arg) => 
+      any: (target, arg) => 
         !!intersection(target, arg).length, 
       
-      hasAll: (target, arg) => 
+      all: (target, arg) => 
         intersection(target, arg).length === arg.length, 
       
-      hasNotAny: (target, arg) => 
+      none: (target, arg) => 
         !intersection(target, arg).length, 
       
-      hasNotAll: (target, arg) => 
-        intersection(target, arg).length !== arg.length,
     };
 
   }
@@ -42,7 +40,7 @@ export class TagService {
       return true;
     }
     if (isString(tagexpr) || isArray(tagexpr)) {
-      tagexpr = {hasAll: tagexpr};
+      tagexpr = {all: tagexpr};
     }
     else if (!isObject(tagexpr)) {
       return false;

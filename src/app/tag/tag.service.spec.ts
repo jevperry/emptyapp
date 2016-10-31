@@ -20,12 +20,12 @@ describe('Service: Tag', () => {
     expect(service.matches({tags:['x']}, ['x'])).toBeTruthy();
   }));
   it('target array should match all of tagexpr array', inject([TagService], (service: TagService) => {
-    expect(service.matches({tags:['x']}, {hasAll: ['x']})).toBeTruthy();
+    expect(service.matches({tags:['x']}, {all: ['x']})).toBeTruthy();
   }));
   it('target array should match all of tagexpr array', inject([TagService], (service: TagService) => {
-    expect(service.matches({tags:['x', 'y']}, {hasAll: ['x', 'y']})).toBeTruthy();
+    expect(service.matches({tags:['x', 'y']}, {all: ['x', 'y']})).toBeTruthy();
   }));
   it('target array should match any of tagexpr array', inject([TagService], (service: TagService) => {
-    expect(service.matches({tags:['x']}, {hasAny: ['x', 'y']})).toBeTruthy();
+    expect(service.matches({tags:['x']}, {any: ['x', 'y']})).toBeTruthy();
   }));
 });

@@ -1,6 +1,6 @@
 import {Component, Input} from '@angular/core';
 
-import { NavigationService } from '../navigation.service';
+import { NavigationService } from '../navigation';
 
 @Component({
   selector: 'sidenav-menu',
@@ -10,8 +10,14 @@ import { NavigationService } from '../navigation.service';
 export class SideNavMenuComponent {
 
   @Input() parent;
+  public nav;
+  
+  constructor(navService : NavigationService){
+    this.nav = navService.getNav();
+  }
 
   clickLink() {
     this.parent.close();
   }
+
 }
