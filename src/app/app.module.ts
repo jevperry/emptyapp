@@ -4,7 +4,7 @@ import { MaterialModule } from '@angular/material';
 
 import { AppService } from '.';  
 import { BannerService } from './banner';  
-import { NavigationService } from './navigation';
+import { TreeService } from './tree';
 
 import { AppComponent } from '.';
 import { BannerComponent } from './banner/banner.component';
@@ -30,7 +30,9 @@ import { Md2Component } from './md2.component';
   providers: [
     AppService,
     BannerService,
-    NavigationService,
+    TreeService,  
+    { provide: 'Window', useValue: window },
+    { provide: 'Console', useValue: window.console },
   ],
   bootstrap: [AppComponent], 
 })
