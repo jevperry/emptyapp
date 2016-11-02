@@ -1,4 +1,5 @@
-import {Component} from '@angular/core';
+import { Component} from '@angular/core';
+import { Router, ActivatedRoute, Params, NavigationEnd  } from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -16,10 +17,15 @@ export class MdComponent {
 
   progress: number = 0;
 
-  constructor() {
+  constructor(private route: ActivatedRoute) {
     // Update the value for the progress-bar on an interval.
     setInterval(() => {
       this.progress = (this.progress + Math.floor(Math.random() * 4) + 1) % 100;
     }, 200);
+    this.route.params.subscribe((params: Params) => {
+      console.log(params);
+    });
+
+    
   }
 }

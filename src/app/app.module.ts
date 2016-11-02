@@ -7,18 +7,19 @@ import { BannerService } from './banner';
 import { TreeService } from './tree';
 
 import { AppComponent } from '.';
+import { AppRoutingModule } from './app-routing.module';
 import { BannerComponent } from './banner/banner.component';
+import { RoutingEventsService } from './routing-events';
 import { SideNavMenuComponent } from './side-nav-menu';
 
-import { routing } from './app.routing';
 import { MdComponent } from './md.component';
 import { Md2Component } from './md2.component';
 
 @NgModule({
   imports: [
     BrowserModule,
-    MaterialModule.forRoot(),
-    routing,
+    MaterialModule.forRoot(), 
+    AppRoutingModule,
   ],
   declarations: [
     AppComponent, 
@@ -30,6 +31,7 @@ import { Md2Component } from './md2.component';
   providers: [
     AppService,
     BannerService,
+    RoutingEventsService,
     TreeService,  
     { provide: 'Window', useValue: window },
     { provide: 'Console', useValue: window.console },

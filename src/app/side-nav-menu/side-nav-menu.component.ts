@@ -130,4 +130,8 @@ export class SideNavMenuComponent {
     console.log('dash_1', dash1);
   }
 
+  clickLink() {
+    this.parent.close();
+  }
+
 }
