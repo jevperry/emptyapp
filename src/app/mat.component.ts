@@ -4,6 +4,8 @@ import {toast} from "angular2-materialize";
 import { AppService } from './app.service';
 import { BannerService } from './banner';
 
+declare var $:any;
+
 @Component({
   selector: 'app-root',
   templateUrl: './mat.component.html',
@@ -28,7 +30,7 @@ export class MatComponent implements OnInit {
   }
 
   clickLink() {
-//     this.parent.close();
+     $('#side-nav-panel').sideNav('hide');
   }
 
   toggleBanner() {

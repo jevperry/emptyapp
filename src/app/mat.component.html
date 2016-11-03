@@ -1,6 +1,8 @@
-<nav>
+<div class="navbar-fixed">
+  <nav>
     <div class="nav-wrapper">
-      <a materialize="sideNav" href="#" data-activates="side-nav-panel" class="button-collapse top-nav full hide-on-large-only">
+      <a materialize="sideNav" [materializeParams]="[{closeOnClick1: true, draggable: true}]" 
+      href="#" data-activates="side-nav-panel" class="button-collapse top-nav full hide-on-large-only">
         <i class="material-icons">menu</i>
       </a>
       <a href="#" class="center" style="font-size:130%;">{{title}}</a>
@@ -15,21 +17,83 @@
         </li>
       </ul>
       <ul id='dropdown1' class='dropdown-content'>
-        <li><a href="#" (click)="toggleBanner()">Banner</a></li>
-        <li><a href="#" (click)="logout()">Logout</a></li>
+        <li><a (click)="toggleBanner()">Banner</a></li>
+        <li><a (click)="logout()">Logout</a></li>
       </ul>
 
       <ul class="side-nav fixed" id="side-nav-panel">
-        <li><a routerLink="/profile" routerLinkActive="active" (click)="clickLink()">Profile</a></li>
-        <li><a routerLink="/md1" routerLinkActive="active" (click)="clickLink()">MD1</a></li>
-        <li><a routerLink="/md2" routerLinkActive="active" (click)="clickLink()">MD2</a></li>
+        <li>
+          <a class="waves-effect" routerLink="/profile" routerLinkActive="active" (click)="clickLink()">
+            <i class="material-icons">cloud</i>
+            Profile
+          </a>
+        </li>
+        <li>
+          <a class="waves-effect" routerLink="/md1" routerLinkActive="active" (click)="clickLink()">
+            <i class="material-icons">cloud</i>
+            MD1
+          </a>
+        </li>
+        <li>
+          <a class="waves-effect" routerLink="/md2" routerLinkActive="active" (click)="clickLink()">
+            <i class="material-icons">cloud</i>
+            MD2
+          </a>
+        </li>
       </ul>
     </div>
-</nav>
+  </nav>
+</div>
 
-<!-- Dropdown Trigger -->
+  <div>1</div>
+  <div>2</div>
+  <div>3</div>
+  <div>4</div>
+  <div>5</div>
+  <div>6</div>
+  <div>7</div>
+  <div>8</div>
+  <div>9</div>
+  <div>0</div>
+  <div>1</div>
+  <div>2</div>
+  <div>3</div>
+  <div>4</div>
+  <div>5</div>
+  <div>6</div>
+  <div>7</div>
+  <div>8</div>
+  <div>9</div>
+  <div>0</div>
+  <div>1</div>
+  <div>2</div>
+  <div>3</div>
+  <div>4</div>
+  <div>5</div>
+  <div>6</div>
+  <div>7</div>
+  <div>8</div>
+  <div>9</div>
+  <div>0</div>
+  <div>1</div>
+  <div>2</div>
+  <div>3</div>
+  <div>4</div>
+  <div>5</div>
+  <div>6</div>
+  <div>7</div>
+  <div>8</div>
+  <div>9</div>
+  <div>0</div>
+  <div>1</div>
+  <div>2</div>
+  <div>3</div>
+  <div>4</div>
+  <div>5</div>
+  <div>6</div>
+  <div>7</div>
+  <div>8</div>
+  <div>9</div>
+  <div>0</div>
 
-  <!-- Dropdown Structure -->
-
-
-<router-outlet></router-outlet> 
+  <router-outlet></router-outlet> 
