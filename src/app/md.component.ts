@@ -4,7 +4,10 @@ import { Router, ActivatedRoute, Params, NavigationEnd  } from '@angular/router'
 @Component({
   selector: 'app-root',
   templateUrl: 'md.component.html',
-  styleUrls: ['md.component.css'],
+  styleUrls: [
+    './shared/page-content.css', 
+    'md.component.css'
+  ],
 })
 export class MdComponent {
   isDarkTheme: boolean = false;

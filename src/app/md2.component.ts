@@ -3,7 +3,10 @@ import {Component} from '@angular/core';
 @Component({
   selector: 'app-root',
   templateUrl: 'md2.component.html', 
-  styleUrls: ['md2.component.css'],
+  styleUrls: [
+    './shared/page-content.css', 
+    'md2.component.css'
+  ],
 })
 export class Md2Component {
   isDarkTheme: boolean = false;

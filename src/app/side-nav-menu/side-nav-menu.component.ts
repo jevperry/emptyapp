@@ -33,11 +33,8 @@ export class SideNavMenuComponent {
         id: 'dashboard',
         title: 'Dashboard',
         icon: '',
-        icontype: '',
-        iconcolor: '',
-        iconcolortype: '',
-        subitemtype: 'tabs',
-        subitems: [{
+        flavour: 'tabbed-panel',
+        tabs: [{
             id: 'dash_1',
             title: 'Dash 1',
             uri: '/',
@@ -57,10 +54,7 @@ export class SideNavMenuComponent {
         id: 'section_1',
         title: 'Section 1',
         icon: '',
-        icontype: '',
-        iconcolor: '',
-        iconcolortype: '',
-        subitems: [{
+        children: [{
             id: 'item1_1',
             title: 'Item 1 1',
             uri: '/',
@@ -80,10 +74,7 @@ export class SideNavMenuComponent {
         id: 'section_2',
         title: 'Section 2',
         icon: '',
-        icontype: '',
-        iconcolor: '',
-        iconcolortype: '',
-        subitems: [{
+        children: [{
             id: 'item2_1',
             title: 'Item 2 1',
             uri: '/',
@@ -103,10 +94,7 @@ export class SideNavMenuComponent {
         id: 'section_3',
         title: 'Section 3',
         icon: '',
-        icontype: '',
-        iconcolor: '',
-        iconcolortype: '',
-        subitems: [{
+        children: [{
             id: 'item3_1',
             title: 'Item 3 1',
             uri: '/',

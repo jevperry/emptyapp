@@ -5,7 +5,7 @@ export class TreeService {
 
   constructor() {}
   
-  buildIndex(nav, subkey='subitems') {
+  buildIndex(nav, subkey='children') {
     
     let index = {};    
     helper(nav, null);

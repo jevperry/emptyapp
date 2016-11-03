@@ -8,6 +8,8 @@ import { TreeService } from './tree';
 
 import { AppComponent } from '.';
 import { AppRoutingModule } from './app-routing.module';
+import { ProfileModule } from './profile';
+
 import { BannerComponent } from './banner/banner.component';
 import { SideNavMenuComponent } from './side-nav-menu';
 
@@ -19,6 +21,7 @@ import { Md2Component } from './md2.component';
     BrowserModule,
     MaterialModule.forRoot(), 
     AppRoutingModule,
+    ProfileModule,
   ],
   declarations: [
     AppComponent, 

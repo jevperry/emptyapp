@@ -9,7 +9,7 @@ describe('Service: Tree', () => {
     id: 'dashboard',
     title: 'Dashboard',
     subitemtype: 'tab',
-    subitems: [{
+    children: [{
         id: 'dash_1',
         title: 'Dash 1',
         uri: '/',
@@ -28,7 +28,7 @@ describe('Service: Tree', () => {
     }, {
     id: 'section_1',
     title: 'Section 1',
-    subitems: [{
+    children: [{
         id: 'item1_1',
         title: 'Item 1 1',
         uri: '/',
@@ -47,7 +47,7 @@ describe('Service: Tree', () => {
     },{
     id: 'section_2',
     title: 'Section 2',
-    subitems: [{
+    children: [{
         id: 'item1_1',
         title: 'Item 2 1',
         uri: '/',
@@ -66,7 +66,7 @@ describe('Service: Tree', () => {
     },{
     id: 'section_3',
     title: 'Section 3',
-    subitems: [{
+    children: [{
         id: 'item1_1',
         title: 'Item 3 1',
         uri: '/',

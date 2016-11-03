@@ -1,63 +1,66 @@
-<md-card>
-  <md-spinner class="app-spinner"></md-spinner>
-  <md-spinner color="accent" class="app-spinner"></md-spinner>
-</md-card>
+<div class="page-content">
 
-<md-card>
-  <label>
-    Indeterminate progress-bar
-    <md-progress-bar
-        class="app-progress"
-        mode="indeterminate"
-        aria-label="Indeterminate progress-bar example"></md-progress-bar>
-  </label>
+  <md-card>
+    <md-spinner class="app-spinner"></md-spinner>
+    <md-spinner color="accent" class="app-spinner"></md-spinner>
+  </md-card>
 
-  <label>
-    Determinate progress bar - {{progress}}%
-    <md-progress-bar
-        class="app-progress"
-        color="accent"
-        mode="determinate"
-        [value]="progress"
-        aria-label="Determinate progress-bar example"></md-progress-bar>
-  </label>
-</md-card>
+  <md-card>
+    <label>
+      Indeterminate progress-bar
+      <md-progress-bar
+          class="app-progress"
+          mode="indeterminate"
+          aria-label="Indeterminate progress-bar example"></md-progress-bar>
+    </label>
 
-<md-card>
-  <md-tab-group>
-    <md-tab>
-      <template md-tab-label>
-        Earth
-      </template>
-      <template md-tab-content>
-        <p>EARTH</p>
-      </template>
-    </md-tab>
-    <md-tab>
-      <template md-tab-label>
-        Fire
-      </template>
-      <template md-tab-content>
-        <p>FIRE</p>
-      </template>
-    </md-tab>
-  </md-tab-group>
-</md-card>
+    <label>
+      Determinate progress bar - {{progress}}%
+      <md-progress-bar
+          class="app-progress"
+          color="accent"
+          mode="determinate"
+          [value]="progress"
+          aria-label="Determinate progress-bar example"></md-progress-bar>
+    </label>
+  </md-card>
+
+  <md-card>
+    <md-tab-group>
+      <md-tab>
+        <template md-tab-label>
+          Earth
+        </template>
+        <template md-tab-content>
+          <p>EARTH</p>
+        </template>
+      </md-tab>
+      <md-tab>
+        <template md-tab-label>
+          Fire
+        </template>
+        <template md-tab-content>
+          <p>FIRE</p>
+        </template>
+      </md-tab>
+    </md-tab-group>
+  </md-card>
 
 
-<md-card>
-  <md-icon>build</md-icon>
-</md-card>
+  <md-card>
+    <md-icon>build</md-icon>
+  </md-card>
 
-<md-card>
-  <button md-button [md-menu-trigger-for]="menu">
-    MENU
-  </button>
-</md-card>
+  <md-card>
+    <button md-button [md-menu-trigger-for]="menu">
+      MENU
+    </button>
+  </md-card>
 
-<md-menu #menu="mdMenu">
-  <button md-menu-item>Lemon</button>
-  <button md-menu-item>Lime</button>
-  <button md-menu-item>Banana</button>
-</md-menu>
+  <md-menu #menu="mdMenu">
+    <button md-menu-item>Lemon</button>
+    <button md-menu-item>Lime</button>
+    <button md-menu-item>Banana</button>
+  </md-menu>
 
+</div>
