@@ -30,9 +30,11 @@ export class MatComponent implements OnInit {
   clickLink() {
 //     this.parent.close();
   }
-  
+
   toggleBanner() {
     this.bannerService.toggle();
   }
 
+  logout() {
+  }
 }
