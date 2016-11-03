@@ -6,7 +6,7 @@
       <a href="#" class="center" style="font-size:130%;">{{title}}</a>
       <ul class="right">
         <li>
-          <a class="dropdown-button" href="#" data-activates="dropdown1">
+          <a class="dropdown-button" href="#" data-activates="dropdown1" data-beloworigin="true">
             <span style="height:56px; line-height:56px;">
               <img style="width:40px;height:40px;border-radius:50%; vertical-align:middle;" 
                   src="https://s.gravatar.com/avatar/f850593bdae3cb1c8c535b4acfdfdb98?s=80">
@@ -15,7 +15,7 @@
         </li>
       </ul>
       <ul id='dropdown1' class='dropdown-content'>
-        <li><a href="#" (click)="toggleBanner()">Toggle banner</a></li>
+        <li><a href="#" (click)="toggleBanner()">Banner</a></li>
         <li><a href="#" (click)="logout()">Logout</a></li>
       </ul>
 
