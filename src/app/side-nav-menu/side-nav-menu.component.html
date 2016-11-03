@@ -8,34 +8,4 @@
 
     {{nav}}
 
-<!--     <header class="nav-header" style="text-align:center;">
-        <a ng-click="clickLogo()">
-            <img ng-src="{{::menuLogo}}" style="height:56px">
-        </a>
-    </header>
-    <div flex style="overflow:auto;">
-        <ul>
-            <li ng-repeat="section in primaryNav track by section.id" id="{{::section.id}}" class="parent-list-item">
-                <h2 ng-show="::section.type == 'separator'" class="menu-heading md-subhead" id="heading_{{::section.title | nospace }}" ng-bind="::section.title"></h2>
-                <div class="menulink-outer" ng-show="::section.type != 'separator'">
-                    <md-button ng-style="getMenuActiveStyle(props.route, section)" ng-click="menuAction($event, section)" ng-href="{{:: !!section.external ? (section.absolute ? '' : host) : '#'}}{{::section.uri}}" target="{{:: !!section.external ? '_blank' : '_self'}}" aria-label="menu link">
-                        <md-icon ng-show="::section.img" md-svg-src="{{::section.img}}" ng-style="::section.color ? {background:section.color} : {opacity: 0.75}" style="width:20px;height:20px;margin-right:15px;border-radius: 2px;"></md-icon>
-                        <span ng-class="::getMenuButtonClass(section)" ng-bind="::section.title"></span>
-                    </md-button>
-                    <div ng-show="::section.type == 'graybutton' && appcounters.issuecounter" class="app-counters">{{::appcounters.issuecounter}}
-                    </div>
-                    <ul id="docs-menu-{{::section.name | nospace}}" ng-if="getMenuOpenState(section, props.route, $index, primaryNav)" class="menu-toggle-list menu-children">
-                        <li ng-repeat="child in ::section.children">
-                            <div>
-                                <md-button ng-show="::child.type !== 'separator'" style="margin-left: 10px;" ng-style="getMenuActiveStyle(props.route, child)" ng-click="menuAction($event, child)" ng-href="{{:: !!child.external ? (child.absolute ? '' : host) : '#'}}{{::child.uri}}" target="{{:: !!child.external ? '_blank' : '_self'}}" aria-label="menu link">
-                                    <span ng-class="::getMenuButtonClass(child)" ng-bind="::child.title"></span>
-                                </md-button>
-                                <div ng-show="::child.type === 'separator'" class="menu-heading md-subsubhead" ng-bind="::child.title"></div>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-            </li>
-        </ul>
-    </div> -->
 </nav>
