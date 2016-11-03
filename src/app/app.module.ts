@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { MaterialModule } from '@angular/material';
+import { MaterializeModule } from "angular2-materialize";
 
 import { AppService } from '.';  
 import { BannerService } from './banner';  
@@ -15,20 +15,22 @@ import { SideNavMenuComponent } from './side-nav-menu';
 
 import { MdComponent } from './md.component';
 import { Md2Component } from './md2.component';
+import { MatComponent } from './mat.component';
 
 @NgModule({
   imports: [
     BrowserModule,
-    MaterialModule.forRoot(), 
+    MaterializeModule,
     AppRoutingModule,
     ProfileModule,
   ],
   declarations: [
     AppComponent, 
     BannerComponent, 
+    SideNavMenuComponent, 
     MdComponent, 
     Md2Component, 
-    SideNavMenuComponent, 
+    MatComponent, 
   ],
   providers: [
     AppService,
@@ -37,7 +39,7 @@ import { Md2Component } from './md2.component';
     { provide: 'Window', useValue: window },
     { provide: 'Console', useValue: window.console },
   ],
-  bootstrap: [AppComponent], 
+  bootstrap: [MatComponent], 
 })
 export class AppModule { }
 

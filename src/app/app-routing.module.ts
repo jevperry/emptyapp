@@ -3,6 +3,7 @@ import { RouterModule } from '@angular/router';
 
 import { MdComponent } from './md.component';
 import { Md2Component } from './md2.component';
+import { MatComponent } from './mat.component';
 
 @NgModule({
   imports: [
