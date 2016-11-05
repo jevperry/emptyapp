@@ -2,6 +2,8 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { MaterializeModule } from "angular2-materialize";
 
+import 'rxjs/Rx';
+
 import { AppService } from '.';  
 import { BannerService } from './banner';  
 import { TreeService } from './tree';
