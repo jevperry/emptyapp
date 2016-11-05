@@ -21,30 +21,56 @@
         <li><a (click)="logout()">Logout</a></li>
       </ul>
 
-      <ul class="side-nav fixed" id="side-nav-panel">
-        <li>
-          <a class="waves-effect" routerLink="/profile" routerLinkActive="active" (click)="clickLink()">
-            <i class="material-icons">cloud</i>
-            Profile
-          </a>
-        </li>
-        <li>
-          <a class="waves-effect" routerLink="/md1" routerLinkActive="active" (click)="clickLink()">
-            <i class="material-icons">cloud</i>
-            MD1
-          </a>
-        </li>
-        <li>
-          <a class="waves-effect" routerLink="/md2" routerLinkActive="active" (click)="clickLink()">
-            <i class="material-icons">cloud</i>
-            MD2
-          </a>
-        </li>
-      </ul>
+      <div class="side-nav fixed" id="side-nav-panel">
+        <ul>
+          <li>
+            <a class="waves-effect" routerLink="/profile" routerLinkActive="active" (click)="clickLink()">
+              <i class="material-icons">cloud</i>
+              Profile
+            </a>
+          </li>
+          <li>
+            <a class="waves-effect" routerLink="/md1" routerLinkActive="active" (click)="clickLink()">
+              <i class="material-icons">cloud</i>
+              MD1
+            </a>
+          </li>
+          <li>
+            <a class="waves-effect" routerLink="/md2" routerLinkActive="active" (click)="clickLink()">
+              <i class="material-icons">cloud</i>
+              MD2
+            </a>
+          </li>
+
+          <li class="no-padding">
+              <ul class="collapsible collapsible-accordion">
+                  <li class="bold active"><a class="collapsible-header waves-effect waves-teal active">Forms</a>
+                      <div class="collapsible-body" style="display: block;">
+                          <ul>
+                            <li>
+                              <a class="waves-effect" routerLink="/md1" routerLinkActive="active" (click)="clickLink()">
+                                MD1
+                              </a>
+                            </li>
+                            <li>
+                              <a class="waves-effect" routerLink="/md2" routerLinkActive="active" (click)="clickLink()">
+                                MD2
+                              </a>
+                            </li>
+                          </ul>
+                      </div>
+                  </li>
+              </ul>
+          </li>
+
+        </ul>
+      </div>
     </div>
   </nav>
 </div>
+
 <div style="text-align:right;">
+
   <div>1</div>
   <div>2</div>
   <div>3</div>
