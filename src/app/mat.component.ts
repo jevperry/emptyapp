@@ -4,6 +4,11 @@ import {toast} from "angular2-materialize";
 
 import { AppService } from './app.service';
 import { BannerService } from './banner';
+import {
+
+  isString
+
+} from 'lodash';  
 
 declare var $:any;
 
@@ -20,14 +25,14 @@ export class MatComponent implements OnInit {
     private appService: AppService, 
     private bannerService: BannerService,
   ) {
-    
+  
     appService.routeStream.subscribe(route => {
       console.log('ROUTE:', route);
     })
   }
 
   ngOnInit(): void {
-    toast("...and Materialize works as well!")
+//     toast("...and Materialize works as well!")
   }
 
   clickLink() {

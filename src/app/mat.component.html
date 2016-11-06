@@ -1,4 +1,431 @@
-<div class="navbar-fixed">
+<style>
+    .material-icons {
+        font-family: 'Material Icons';
+        font-weight: normal;
+        font-style: normal;
+        font-size: 24px;
+        line-height: 1;
+        letter-spacing: normal;
+        text-transform: none;
+        display: inline-block;
+        white-space: nowrap;
+        word-wrap: normal;
+        direction: ltr;
+        -webkit-font-smoothing: antialiased;
+        text-rendering: optimizeLegibility;
+        font-feature-settings: 'liga';
+    }
+
+    header, main, footer {
+        padding-left: 300px;
+    }
+
+    @media only screen and (max-width: 992px) {
+        header, main, footer {
+            padding-left: 0;
+        }
+    }
+
+    nav.top-nav {
+        height: 122px;
+        box-shadow: none;
+    }
+
+    @media only screen and (min-width: 601px) {
+        nav, nav .nav-wrapper i, nav a.button-collapse, nav a.button-collapse i {
+            height: 64px;
+            line-height: 64px;
+        }
+    }
+
+    nav {
+        color: #fff;
+        background-color: #ee6e73;
+        width: 100%;
+        height: 56px;
+        line-height: 56px;
+    }
+
+    .container {
+        margin: 0 auto;
+        max-width: 1280px;
+        width: 90%;
+    }
+
+    @media only screen and (min-width: 993px) {
+        .container {
+            width: 85%;
+        }
+    }
+
+    @media only screen and (min-width: 601px) {
+        .container {
+            width: 85%;
+        }
+    }
+
+    nav .nav-wrapper {
+        position: relative;
+        height: 100%;
+    }
+
+    @media only screen and (max-width: 992px) {
+        nav .nav-wrapper {
+            text-align: center;
+        }
+    }
+
+    nav.top-nav a.page-title {
+        line-height: 122px;
+        font-size: 48px;
+    }
+
+    @media only screen and (max-width: 992px) {
+        nav .nav-wrapper a.page-title {
+            font-size: 36px;
+        }
+    }
+
+    nav a {
+        -webkit-font-smoothing: antialiased;
+    }
+
+    nav a {
+        color: #fff;
+    }
+
+    a.button-collapse.top-nav.full {
+        line-height: 122px;
+    }
+
+    a.button-collapse.top-nav {
+        position: absolute;
+        text-align: center;
+        height: 48px;
+        width: 48px;
+        left: 7.5%;
+        top: 0;
+        float: none;
+        margin-left: 1.5rem;
+        color: #fff;
+        font-size: 36px;
+        z-index: 2;
+    }
+
+    @media only screen and (max-width: 600px) {
+        a.button-collapse.top-nav {
+            left: 5%;
+        }
+    }
+
+    a.button-collapse.top-nav i {
+        font-size: 32px;
+    }
+
+    @media only screen and (min-width: 993px) {
+        .hide-on-large-only {
+            display: none !important;
+        }
+    }
+
+    a.button-collapse.top-nav i {
+        font-size: 32px;
+    }
+
+    ul.side-nav.fixed:hover {
+        overflow-y: auto;
+    }
+
+    ul.side-nav.fixed {
+        overflow: hidden;
+    }
+
+    ul.side-nav.fixed li {
+        line-height: 44px;
+    }
+
+    ul.side-nav.fixed li a {
+        font-size: 13px;
+        line-height: 44px;
+        height: 44px;
+        padding: 0 30px;
+    }
+
+    ul.side-nav.fixed li.logo {
+        text-align: center;
+        margin-top: 32px;
+        margin-bottom: 80px
+    }
+
+    ul.side-nav.fixed li.logo:hover,ul.side-nav.fixed li.logo #logo-container:hover {
+        background-color: transparent
+    }
+
+    #logo-container {
+        height: 57px;
+        margin-bottom: 32px;
+    }
+
+    #front-page-logo {
+        display: inline-block;
+        height: 100%;
+        pointer-events: none;
+    }
+
+    #nav-mobile li.search {
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 120px;
+        margin-top: 1px;
+        padding: 1px 0 0 0;
+        z-index: 2
+    }
+
+    #nav-mobile li.search:hover {
+        background-color: #fff
+    }
+
+    #nav-mobile li.search .search-wrapper {
+        margin: 0 12px;
+        transition: margin .25s ease
+    }
+
+    #nav-mobile li.search .search-wrapper.focused {
+        margin: 0
+    }
+
+    #nav-mobile li.search .search-wrapper input#search {
+        display: block;
+        font-size: 16px;
+        font-weight: 300;
+        width: 100%;
+        height: 45px;
+        margin: 0;
+        padding: 0 45px 0 15px;
+        border: 0
+    }
+
+    #nav-mobile li.search .search-wrapper input#search:focus {
+        outline: none
+    }
+
+    #nav-mobile li.search .search-wrapper i.material-icons {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        cursor: pointer
+    }
+
+    #nav-mobile li.search .search-results {
+        margin: 0;
+        border-top: 1px solid #e9e9e9;
+        background-color: #fff
+    }
+
+    #nav-mobile li.search .search-results a {
+        font-size: 12px;
+        white-space: nowrap
+    }
+
+    #nav-mobile li.search .search-results a:hover,#nav-mobile li.search .search-results a.focused {
+        background-color: #eee;
+        outline: none
+    }
+
+    ul.side-nav.fixed ul.collapsible-accordion .collapsible-body li a {
+        font-weight: 400;
+        padding: 0 37.5px 0 45px;
+    }
+
+    .caption {
+        font-size: 1.25rem;
+        font-weight: 300;
+        margin-bottom: 30px
+    }
+</style>
+<header>
+    <nav class="top-nav">
+        <div class="container">
+            <div class="nav-wrapper">
+                <a class="page-title">SideNav</a>
+            </div>
+        </div>
+    </nav>
+    <div class="container">
+        <a  materialize="sideNav" [materializeParams]="[{closeOnClick1: true, draggable: true}]" 
+        href="#" data-activates="nav-mobile" class="button-collapse top-nav full hide-on-large-only">
+            <i class="material-icons">menu</i>
+        </a>
+    </div>
+    <ul id="nav-mobile" class="side-nav fixed">
+        <li class="logo">
+            <a id="logo-container" href="http://materializecss.com/" class="brand-logo">
+                <object id="front-page-logo" type="image/svg+xml" data="assets/materialize.svg">Your browser does not support SVG</object>
+            </a>
+        </li>
+        <li class="search">
+            <div class="search-wrapper card">
+                <input id="search">
+                <i class="material-icons">search</i>
+                <div class="search-results"></div>
+            </div>
+        </li>
+        <li class="bold">
+            <a href="about.html" class="waves-effect waves-teal">About</a>
+        </li>
+        <li class="bold">
+            <a href="getting-started.html" class="waves-effect waves-teal">Getting Started</a>
+        </li>
+        <li class="no-padding">
+            <ul class="collapsible collapsible-accordion">
+                <li class="bold">
+                    <a class="collapsible-header  waves-effect waves-teal">CSS</a>
+                    <div class="collapsible-body">
+                        <ul>
+                            <li>
+                                <a href="color.html">Color</a>
+                            </li>
+                            <li>
+                                <a href="grid.html">Grid</a>
+                            </li>
+                            <li>
+                                <a href="helpers.html">Helpers</a>
+                            </li>
+                            <li>
+                                <a href="media-css.html">Media</a>
+                            </li>
+                            <li>
+                                <a href="sass.html">Sass</a>
+                            </li>
+                            <li>
+                                <a href="shadow.html">Shadow</a>
+                            </li>
+                            <li>
+                                <a href="table.html">Table</a>
+                            </li>
+                            <li>
+                                <a href="typography.html">Typography</a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="bold">
+                    <a class="collapsible-header  waves-effect waves-teal">Components</a>
+                    <div class="collapsible-body">
+                        <ul>
+                            <li>
+                                <a href="badges.html">Badges</a>
+                            </li>
+                            <li>
+                                <a href="buttons.html">Buttons</a>
+                            </li>
+                            <li>
+                                <a href="breadcrumbs.html">Breadcrumbs</a>
+                            </li>
+                            <li>
+                                <a href="cards.html">Cards</a>
+                            </li>
+                            <li>
+                                <a href="chips.html">Chips</a>
+                            </li>
+                            <li>
+                                <a href="collections.html">Collections</a>
+                            </li>
+                            <li>
+                                <a href="footer.html">Footer</a>
+                            </li>
+                            <li>
+                                <a href="forms.html">Forms</a>
+                            </li>
+                            <li>
+                                <a href="icons.html">Icons</a>
+                            </li>
+                            <li>
+                                <a href="navbar.html">Navbar</a>
+                            </li>
+                            <li>
+                                <a href="pagination.html">Pagination</a>
+                            </li>
+                            <li>
+                                <a href="preloader.html">Preloader</a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="bold">
+                    <a class="collapsible-header active waves-effect waves-teal">JavaScript</a>
+                    <div class="collapsible-body">
+                        <ul>
+                            <li>
+                                <a href="carousel.html">Carousel</a>
+                            </li>
+                            <li>
+                                <a href="collapsible.html">Collapsible</a>
+                            </li>
+                            <li>
+                                <a href="dialogs.html">Dialogs</a>
+                            </li>
+                            <li>
+                                <a href="dropdown.html">Dropdown</a>
+                            </li>
+                            <li>
+                                <a href="media.html">Media</a>
+                            </li>
+                            <li>
+                                <a href="modals.html">Modals</a>
+                            </li>
+                            <li>
+                                <a href="parallax.html">Parallax</a>
+                            </li>
+                            <li>
+                                <a href="pushpin.html">Pushpin</a>
+                            </li>
+                            <li>
+                                <a href="scrollfire.html">ScrollFire</a>
+                            </li>
+                            <li>
+                                <a href="scrollspy.html">Scrollspy</a>
+                            </li>
+                            <li class="active">
+                                <a href="side-nav.html">SideNav</a>
+                            </li>
+                            <li>
+                                <a href="tabs.html">Tabs</a>
+                            </li>
+                            <li>
+                                <a href="transitions.html">Transitions</a>
+                            </li>
+                            <li>
+                                <a href="waves.html">Waves</a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </li>
+        <li class="bold">
+            <a href="http://materializecss.com/mobile.html" class="waves-effect waves-teal">Mobile</a>
+        </li>
+        <li class="bold">
+            <a href="showcase.html" class="waves-effect waves-teal">Showcase</a>
+        </li>
+    </ul>
+</header>
+<main>
+    <div class="container">
+        <div class="row">
+            <div class="col s12 m9 l10">
+                <div id="structure" class="section scrollspy">
+                    <h4>Introduction</h4>
+                    <p class="caption">This is a slide out menu. You can add a dropdown to your sidebar by using our collapsible component. If you want to see a demo, our sidebar will use this on smaller screens. To use this in conjunction with a fullscreen navigation, you have to use two copies of the same UL.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+<!-- 
+<div class="navbar">
   <nav>
     <div class="nav-wrapper">
       <a materialize="sideNav" [materializeParams]="[{closeOnClick1: true, draggable: true}]" 
@@ -16,6 +443,11 @@
           </a>
         </li>
       </ul>
+    </div>
+  </nav>
+</div>
+
+
       <ul id='dropdown1' class='dropdown-content'>
         <li><a (click)="toggleBanner()">Banner</a></li>
         <li><a (click)="logout()">Logout</a></li>
@@ -62,12 +494,29 @@
                   </li>
               </ul>
           </li>
+          <li class="no-padding">
+              <ul class="collapsible collapsible-accordion">
+                  <li class="bold active"><a class="collapsible-header waves-effect waves-teal active">Forms</a>
+                      <div class="collapsible-body" style="display: block;">
+                          <ul>
+                            <li>
+                              <a class="waves-effect" routerLink="/md1" routerLinkActive="active" (click)="clickLink()">
+                                MD1
+                              </a>
+                            </li>
+                            <li>
+                              <a class="waves-effect" routerLink="/md2" routerLinkActive="active" (click)="clickLink()">
+                                MD2
+                              </a>
+                            </li>
+                          </ul>
+                      </div>
+                  </li>
+              </ul>
+          </li>
 
         </ul>
       </div>
-    </div>
-  </nav>
-</div>
 
 <div style="text-align:right;">
 
@@ -121,5 +570,5 @@
   <div>8</div>
   <div>9</div>
   <div>0</div>
-<div>
-  <router-outlet></router-outlet> 
+<div> -->
+<router-outlet></router-outlet>

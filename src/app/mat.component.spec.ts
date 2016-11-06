@@ -2,6 +2,7 @@
 
 import { TestBed, async } from '@angular/core/testing';
 import { MatComponent } from './mat.component';
+import 'rxjs/Rx';
 
 describe('Mat: AngularExample', () => {
   beforeEach(() => {
@@ -21,7 +22,7 @@ describe('Mat: AngularExample', () => {
   it(`should have as title 'app works!'`, async(() => {
     let fixture = TestBed.createComponent(MatComponent);
     let app = fixture.debugElement.componentInstance;
-    expect(mat.title).toEqual('app works!');
+    expect(app.title).toEqual('app works!');
   }));
 
   it('should render title in a h1 tag', async(() => {
