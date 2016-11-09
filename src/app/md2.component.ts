@@ -1,7 +1,7 @@
 import {Component} from '@angular/core';
 
 @Component({
-  selector: 'app-root',
+//   selector: 'app-root',
   templateUrl: 'md2.component.html', 
   styleUrls: [
     './shared/page-content.css', 

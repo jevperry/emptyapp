@@ -2,7 +2,7 @@ import { Component} from '@angular/core';
 import { Router, ActivatedRoute, Params, NavigationEnd  } from '@angular/router';
 
 @Component({
-  selector: 'app-root',
+//   selector: 'app-root',
   templateUrl: 'md.component.html',
   styleUrls: [
     './shared/page-content.css', 
