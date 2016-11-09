@@ -1,34 +1,356 @@
-<!-- <banner> This is a banner </banner>
-<md-sidenav-layout [class.m2app-dark]="isDarkTheme">
+<div class="page-body f-layout f-column">
+  <div class="page-toolbar f-layout f-row f-align-center" style="">
+    <a materialize="sideNav"
+    [materializeParams]="[{draggable: true}]"
+    href="#" data-activates="nav-mobile"
+    class="button-collapse hide-on-large-only">
+        <i class="material-icons">menu</i>
+    </a>
+    <a href="#" class="f-grow f-justify-start">{{title}}</a>
 
-  <md-sidenav #sidenav mode="push" class="app-sidenav">
-    <sidenav-menu [parent]="sidenav"></sidenav-menu>
-  </md-sidenav>
+    <a href="#" data-activates="nav-mobile" class="">
+        <i class="material-icons">menu</i>
+    </a>
+    <ul class="right">
+      <li>
+        <a class="dropdown-button" data-activates="userdropdown" data-beloworigin="true">
+          <span style="height:56px; line-height:56px;">
+            <img style="width:40px;height:40px;border-radius:50%; vertical-align:middle;"
+                src="https://s.gravatar.com/avatar/f850593bdae3cb1c8c535b4acfdfdb98?s=80">
+          </span>
+        </a>
+      </li>
+    </ul>
+  </div>
+  <div class="page-main f-grow">
+    <div class="page-main-inner">
+      <div class="container">
 
-  <md-toolbar color="primary">
-    <button class="app-icon-button" (click)="sidenav.toggle()">
-      <i class="material-icons app-toolbar-menu">menu</i>
-    </button>
+        <router-outlet></router-outlet>
+        <hr>
+        <div class="row">
+          <div class="col s12 m9 l10">
+            <div id="structure" class="section scrollspy">
+              <h4>Introduction</h4>
+              <p class="caption">This is a slide out menu. You can add a dropdown to your sidebar by using our collapsible component. If you want to see a demo, our sidebar will use this on smaller screens. To use this in conjunction with a fullscreen navigation, you have to use two copies of the same UL.</p>
+              <p class="caption">This is a slide out menu. You can add a dropdown to your sidebar by using our collapsible component. If you want to see a demo, our sidebar will use this on smaller screens. To use this in conjunction with a fullscreen navigation, you have to use two copies of the same UL.</p>
+              <p class="caption">This is a slide out menu. You can add a dropdown to your sidebar by using our collapsible component. If you want to see a demo, our sidebar will use this on smaller screens. To use this in conjunction with a fullscreen navigation, you have to use two copies of the same UL.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <ul id="nav-mobile" class="side-nav fixed">
+      <li class="logo">
+          <a id="logo-container" href="http://materializecss.com/" class="brand-logo">
+              <object id="front-page-logo" type="image/svg+xml" data="assets/materialize.svg">Your browser does not support SVG</object>
+          </a>
+      </li>
+      <li class="search">
+          <div class="search-wrapper card">
+              <input id="search">
+              <i class="material-icons">search</i>
+              <div class="search-results"></div>
+          </div>
+      </li>
+      <li class="bold">
+          <a href="about.html" class="waves-effect waves-teal">About</a>
+      </li>
+      <li class="bold">
+          <a href="getting-started.html" class="waves-effect waves-teal">Getting Started</a>
+      </li>
+      <li class="no-padding">
+          <ul class="collapsible collapsible-accordion">
+              <li class="bold">
+                  <a class="collapsible-header  waves-effect waves-teal">CSS</a>
+                  <div class="collapsible-body">
+                      <ul>
+                          <li>
+                              <a href="color.html">Color</a>
+                          </li>
+                          <li>
+                              <a href="grid.html">Grid</a>
+                          </li>
+                          <li>
+                              <a href="helpers.html">Helpers</a>
+                          </li>
+                          <li>
+                              <a href="media-css.html">Media</a>
+                          </li>
+                          <li>
+                              <a href="sass.html">Sass</a>
+                          </li>
+                          <li>
+                              <a href="shadow.html">Shadow</a>
+                          </li>
+                          <li>
+                              <a href="table.html">Table</a>
+                          </li>
+                          <li>
+                              <a href="typography.html">Typography</a>
+                          </li>
+                      </ul>
+                  </div>
+              </li>
+              <li class="bold">
+                  <a class="collapsible-header  waves-effect waves-teal">Components</a>
+                  <div class="collapsible-body">
+                      <ul>
+                          <li>
+                              <a href="badges.html">Badges</a>
+                          </li>
+                          <li>
+                              <a href="buttons.html">Buttons</a>
+                          </li>
+                          <li>
+                              <a href="breadcrumbs.html">Breadcrumbs</a>
+                          </li>
+                          <li>
+                              <a href="cards.html">Cards</a>
+                          </li>
+                          <li>
+                              <a href="chips.html">Chips</a>
+                          </li>
+                          <li>
+                              <a href="collections.html">Collections</a>
+                          </li>
+                          <li>
+                              <a href="footer.html">Footer</a>
+                          </li>
+                          <li>
+                              <a href="forms.html">Forms</a>
+                          </li>
+                          <li>
+                              <a href="icons.html">Icons</a>
+                          </li>
+                          <li>
+                              <a href="navbar.html">Navbar</a>
+                          </li>
+                          <li>
+                              <a href="pagination.html">Pagination</a>
+                          </li>
+                          <li>
+                              <a href="preloader.html">Preloader</a>
+                          </li>
+                      </ul>
+                  </div>
+              </li>
+              <li class="bold">
+                  <a class="collapsible-header waves-effect waves-teal">JavaScript</a>
+                  <div class="collapsible-body">
+                      <ul>
+                          <li>
+                              <a href="carousel.html">Carousel</a>
+                          </li>
+                          <li>
+                              <a href="collapsible.html">Collapsible</a>
+                          </li>
+                          <li>
+                              <a href="dialogs.html">Dialogs</a>
+                          </li>
+                          <li>
+                              <a href="dropdown.html">Dropdown</a>
+                          </li>
+                          <li>
+                              <a href="media.html">Media</a>
+                          </li>
+                          <li>
+                              <a href="modals.html">Modals</a>
+                          </li>
+                          <li>
+                              <a href="parallax.html">Parallax</a>
+                          </li>
+                          <li>
+                              <a href="pushpin.html">Pushpin</a>
+                          </li>
+                          <li>
+                              <a href="scrollfire.html">ScrollFire</a>
+                          </li>
+                          <li>
+                              <a href="scrollspy.html">Scrollspy</a>
+                          </li>
+                          <li class="active">
+                              <a href="side-nav.html">SideNav</a>
+                          </li>
+                          <li>
+                              <a href="tabs.html">Tabs</a>
+                          </li>
+                          <li>
+                              <a href="transitions.html">Transitions</a>
+                          </li>
+                          <li>
+                              <a href="waves.html">Waves</a>
+                          </li>
+                      </ul>
+                  </div>
+              </li>
+          </ul>
+      </li>
+      <li class="bold">
+          <a href="http://materializecss.com/mobile.html" class="waves-effect waves-teal">Mobile</a>
+      </li>
+      <li class="bold">
+          <a href="showcase.html" class="waves-effect waves-teal">Showcase</a>
+      </li>
+  </ul>
 
-    {{title}}
+  <ul id='userdropdown' class='dropdown-content'>
+    <li><a (click)="toggleBanner()">Banner</a></li>
+    <li><a (click)="logout()">Logout</a></li>
+  </ul>
 
-    <span class="app-toolbar-filler"></span>
-    <button md-icon-button [md-menu-trigger-for]="menu" style=";margin-right:10px;">
-      <img style="width:40px;height:40px;border-radius:50%" 
-      src="https://s.gravatar.com/avatar/f850593bdae3cb1c8c535b4acfdfdb98?s=80">      
-    </button>
-    <md-menu x-position="before" y-position="below" #menu="mdMenu">
-      <button md-menu-item (click)="toggleBanner()">Toggle banner</button>
-      <button md-menu-item (click)="isDarkTheme = !isDarkTheme">Toggle theme</button>
-      <button md-menu-item>Log out</button>
-    </md-menu>
-  </md-toolbar>
+</div>
 
-  <router-outlet></router-outlet> 
 
-</md-sidenav-layout>
+<!--
+<div class="navbar">
+  <nav>
+    <div class="nav-wrapper">
+      <a materialize="sideNav" [materializeParams]="[{closeOnClick1: true, draggable: true}]"
+      href="#" data-activates="side-nav-panel" class="button-collapse top-nav full hide-on-large-only">
+        <i class="material-icons">menu</i>
+      </a>
+      <a href="#" class="center" style="font-size:130%;">{{title}}</a>
+      <ul class="right">
+        <li>
+          <a class="dropdown-button" href="#" data-activates="userdropdown" data-beloworigin="true">
+            <span style="height:56px; line-height:56px;">
+              <img style="width:40px;height:40px;border-radius:50%; vertical-align:middle;"
+                  src="https://s.gravatar.com/avatar/f850593bdae3cb1c8c535b4acfdfdb98?s=80">
+            </span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+</div>
 
-<span class="app-action" [class.m2app-dark]="isDarkTheme">
-  <button md-fab><md-icon>check circle</md-icon></button>
-</span>
- -->
+
+      <ul id='userdropdown' class='dropdown-content'>
+        <li><a (click)="toggleBanner()">Banner</a></li>
+        <li><a (click)="logout()">Logout</a></li>
+      </ul>
+
+      <div class="side-nav fixed" id="side-nav-panel">
+        <ul>
+          <li>
+            <a class="waves-effect" routerLink="/profile" routerLinkActive="active" (click)="clickLink()">
+              <i class="material-icons">cloud</i>
+              Profile
+            </a>
+          </li>
+          <li>
+            <a class="waves-effect" routerLink="/md1" routerLinkActive="active" (click)="clickLink()">
+              <i class="material-icons">cloud</i>
+              MD1
+            </a>
+          </li>
+          <li>
+            <a class="waves-effect" routerLink="/md2" routerLinkActive="active" (click)="clickLink()">
+              <i class="material-icons">cloud</i>
+              MD2
+            </a>
+          </li>
+
+          <li class="no-padding">
+              <ul class="collapsible collapsible-accordion">
+                  <li class="bold active"><a class="collapsible-header waves-effect waves-teal active">Forms</a>
+                      <div class="collapsible-body" style="display: block;">
+                          <ul>
+                            <li>
+                              <a class="waves-effect" routerLink="/md1" routerLinkActive="active" (click)="clickLink()">
+                                MD1
+                              </a>
+                            </li>
+                            <li>
+                              <a class="waves-effect" routerLink="/md2" routerLinkActive="active" (click)="clickLink()">
+                                MD2
+                              </a>
+                            </li>
+                          </ul>
+                      </div>
+                  </li>
+              </ul>
+          </li>
+          <li class="no-padding">
+              <ul class="collapsible collapsible-accordion">
+                  <li class="bold active"><a class="collapsible-header waves-effect waves-teal active">Forms</a>
+                      <div class="collapsible-body" style="display: block;">
+                          <ul>
+                            <li>
+                              <a class="waves-effect" routerLink="/md1" routerLinkActive="active" (click)="clickLink()">
+                                MD1
+                              </a>
+                            </li>
+                            <li>
+                              <a class="waves-effect" routerLink="/md2" routerLinkActive="active" (click)="clickLink()">
+                                MD2
+                              </a>
+                            </li>
+                          </ul>
+                      </div>
+                  </li>
+              </ul>
+          </li>
+
+        </ul>
+      </div>
+
+<div style="text-align:right;">
+
+  <div>1</div>
+  <div>2</div>
+  <div>3</div>
+  <div>4</div>
+  <div>5</div>
+  <div>6</div>
+  <div>7</div>
+  <div>8</div>
+  <div>9</div>
+  <div>0</div>
+  <div>1</div>
+  <div>2</div>
+  <div>3</div>
+  <div>4</div>
+  <div>5</div>
+  <div>6</div>
+  <div>7</div>
+  <div>8</div>
+  <div>9</div>
+  <div>0</div>
+  <div>1</div>
+  <div>2</div>
+  <div>3</div>
+  <div>4</div>
+  <div>5</div>
+  <div>6</div>
+  <div>7</div>
+  <div>8</div>
+  <div>9</div>
+  <div>0</div>
+  <div>1</div>
+  <div>2</div>
+  <div>3</div>
+  <div>4</div>
+  <div>5</div>
+  <div>6</div>
+  <div>7</div>
+  <div>8</div>
+  <div>9</div>
+  <div>0</div>
+  <div>1</div>
+  <div>2</div>
+  <div>3</div>
+  <div>4</div>
+  <div>5</div>
+  <div>6</div>
+  <div>7</div>
+  <div>8</div>
+  <div>9</div>
+  <div>0</div>
+<div> -->
+
+
+
+<!--  -->

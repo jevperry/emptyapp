@@ -4,8 +4,8 @@ import { MaterializeModule } from "angular2-materialize";
 
 import 'rxjs/Rx';
 
-import { AppService } from '.';  
-import { BannerService } from './banner';  
+import { AppService } from '.';
+import { BannerService } from './banner';
 import { TreeService } from './tree';
 
 import { AppComponent } from '.';
@@ -17,7 +17,6 @@ import { SideNavMenuComponent } from './side-nav-menu';
 
 import { MdComponent } from './md.component';
 import { Md2Component } from './md2.component';
-import { MatComponent } from './mat.component';
 
 @NgModule({
   imports: [
@@ -27,21 +26,19 @@ import { MatComponent } from './mat.component';
     ProfileModule,
   ],
   declarations: [
-    AppComponent, 
-    BannerComponent, 
-    SideNavMenuComponent, 
-    MdComponent, 
-    Md2Component, 
-    MatComponent, 
+    AppComponent,
+    BannerComponent,
+    SideNavMenuComponent,
+    MdComponent,
+    Md2Component,
   ],
   providers: [
     AppService,
     BannerService,
-    TreeService,  
+    TreeService,
     { provide: 'Window', useValue: window },
     { provide: 'Console', useValue: window.console },
   ],
-  bootstrap: [MatComponent], 
+  bootstrap: [AppComponent], 
 })
 export class AppModule { }
-
