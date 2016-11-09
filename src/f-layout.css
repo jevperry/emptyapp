@@ -1,0 +1,167 @@
+.f-hide {
+  display: none;
+}
+
+.f-show {
+  display: block;
+}
+
+.f-layout {
+  display: flex;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.f-layout.f-show {
+  display: flex;
+}
+
+.f-layout.f-row {
+  flex-direction: row;
+}
+
+.f-layout.f-column {
+  flex-direction: column;
+}
+
+.f-justify-start {
+  justify-content: flex-start !important;
+}
+
+.f-justify-center {
+  justify-content: center;
+}
+
+.f-align-start {
+  align-items: flex-start;
+}
+
+.f-align-center {
+  align-items: center;
+}
+
+.f-layout > * {
+  flex: 0 1 auto;
+}
+
+.f-layout > .f-grow {
+  flex: 1 1 auto;
+}
+
+.f-layout > .f-shrink {
+  flex: 0 0;
+}
+
+.f-layout > .f-fixed {
+  flex: 0 1 auto;
+}
+
+.f-layout > .f-alignself-start {
+  align-self: flex-start;
+}
+
+.f-layout > .f-alignself-center {
+  align-self: center;;
+}
+
+@media only screen and (max-width: 600px) {
+  .f-row-s {
+    flex-direction: row;
+  }
+
+  .f-column-s {
+    flex-direction: column;
+  }
+
+  .f-grow-s {
+    flex: 1 1 auto;
+  }
+
+  .f-shrink-s {
+    flex: 0 0;
+  }
+
+  .f-fixed-s {
+    flex: 0 1 auto;
+  }
+
+  .f-hide-s {
+    display: none;
+  }
+
+  .f-show-s {
+    display: block;
+  }
+
+  .f-layout.f-show-s {
+    display: flex;
+  }
+
+}
+
+@media only screen and (min-width: 601px) and (max-width: 992px) {
+  .f-row-m {
+    flex-direction: row;
+  }
+
+  .f-column-m {
+    flex-direction: column;
+  }
+
+  .f-grow-m {
+    flex: 1 1 auto;
+  }
+
+  .f-shrink-m {
+    flex: 0 0;
+  }
+
+  .f-fixed-m {
+    flex: 0 1 auto;
+  }
+
+  .f-hide-m {
+    display: none;
+  }
+
+  .f-show-m {
+    display: block;
+  }
+
+  .f-layout.f-show-m {
+    display: flex;
+  }
+}
+
+@media only screen and (min-width: 993px) {
+  .f-row-l {
+    flex-direction: row;
+  }
+
+  .f-column-l {
+    flex-direction: column;
+  }
+
+  .f-grow-l {
+    flex: 1 1 auto;
+  }
+
+  .f-shrink-l {
+    flex: 0 0;
+  }
+
+  .f-fixed-l {
+    flex: 0 1 auto;
+  }
+
+  .f-hide-l {
+    display: none;
+  }
+
+  .f-show-l {
+    display: block;
+  }
+
+  .f-layout.f-show-l {
+    display: flex;
+  }
+}

@@ -17,12 +17,11 @@ body {
 
 #sidenav-overlay {
     z-index: 995;
-}    
-
-app-root {
-    display: block; 
 }
 
-////// from ghpages materialize css 
+app-root {
+    display: block;
+    height:100%;
+}
 
-
+////// from ghpages materialize css
