@@ -10,13 +10,14 @@ import { TreeService } from './tree';
 
 import { AppComponent } from '.';
 import { AppRoutingModule } from './app-routing.module';
-import { ProfileModule } from './profile';
 
 import { BannerComponent } from './banner/banner.component';
 import { SideNavMenuComponent } from './side-nav-menu';
 
+import { ProfileModule } from './profile';
 import { MdComponent } from './md.component';
 import { Md2Component } from './md2.component';
+import { Md3Component } from './md3.component';
 
 @NgModule({
   imports: [
@@ -31,6 +32,7 @@ import { Md2Component } from './md2.component';
     SideNavMenuComponent,
     MdComponent,
     Md2Component,
+    Md3Component,
   ],
   providers: [
     AppService,
@@ -39,6 +41,6 @@ import { Md2Component } from './md2.component';
     { provide: 'Window', useValue: window },
     { provide: 'Console', useValue: window.console },
   ],
-  bootstrap: [AppComponent], 
+  bootstrap: [AppComponent],
 })
 export class AppModule { }

@@ -46,17 +46,17 @@ export class AppComponent implements OnInit {
         tabs: [{
             id: 'dash_1',
             name: 'Dash 1',
-            url: '/',
+            url: '/d/md1',
             has: [],
         },{
             id: 'dash_2',
             name: 'Dash 2',
-            url: '/',
+            url: '/d/md2',
             has: [],
         },{
             id: 'dash_3',
             name: 'Dash 3',
-            url: '/',
+            url: '/d/md3',
             has: [],
         }],
     }, {
@@ -66,17 +66,17 @@ export class AppComponent implements OnInit {
         children: [{
             id: 'item1_1',
             name: 'Item 1 1',
-            url: '/',
+            url: '/s1/md1',
             has: [],
         },{
             id: 'item1_2',
             name: 'Item 1 2',
-            url: '/',
+            url: '/s1/md2',
             has: [],
         },{
             id: 'item1_3',
             name: 'Item 1 3',
-            url: '/',
+            url: '/s1/md3',
             has: [],
         }],
     },{
@@ -86,17 +86,17 @@ export class AppComponent implements OnInit {
         children: [{
             id: 'item2_1',
             name: 'Item 2 1',
-            url: '/',
+            url: '/s2/md1',
             has: [],
         },{
             id: 'item2_2',
             name: 'Item 2 2',
-            url: '/',
+            url: '/s2/md2',
             has: [],
         },{
             id: 'item2_3',
             name: 'Item 2 3',
-            url: '/',
+            url: '/s2/md3',
             has: [],
         }],
     },{
@@ -106,17 +106,17 @@ export class AppComponent implements OnInit {
         children: [{
             id: 'item3_1',
             name: 'Item 3 1',
-            url: '/',
+            url: '/s3/md1',
             has: [],
         },{
             id: 'item3_2',
             name: 'Item 3 2',
-            url: '/',
+            url: '/s3/md2',
             has: [],
         },{
             id: 'item3_3',
             name: 'Item 3 3',
-            url: '/',
+            url: '/s3/md3',
             has: [],
         }],
     }];
