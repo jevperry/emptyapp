@@ -47,40 +47,32 @@
               <img id="front-page-logo" src="assets/materialize.svg">
           </a>
       </li>
-      <!-- <li class="search">
-          <div class="search-wrapper card">
-              <input id="search">
-              <i class="material-icons">search</i>
-              <div class="search-results"></div>
-          </div>
-      </li> -->
-
       <li class="no-padding">
           <ul class="collapsible collapsible-accordion">
               <li class="bold" *ngFor="let item of nav">
 
-                  <a *ngIf="item.url" class="waves-effect waves-teal"
+                  <a *ngIf="item.url" class="waves-effect waves-grey"
                   routerLink="{{item.url}}"
                   routerLinkActive="active" (click)="clickLink()">
                     <i class="material-icons">cloud</i> {{item.name}}
                   </a>
 
-                  <a *ngIf="item.flavour == 'tabbed-panel'" class="waves-effect waves-teal"
+                  <a *ngIf="item.flavour == 'tabbed-panel'" class="waves-effect waves-grey"
                     (click)="clickLink()">
                     <i class="material-icons">cloud</i> {{item.name}} [tabs]
                   </a>
 
-                  <a *ngIf="item.children" class="collapsible-header  waves-effect waves-teal">
+                  <a *ngIf="item.children" class="collapsible-header  waves-effect waves-grey">
                     <i class="material-icons">cloud</i> {{item.name}}
                   </a>
                   <div class="collapsible-body">
                       <ul>
                           <li *ngFor="let child of item.children">
 
-                              <a class="waves-effect waves-teal"
+                              <a class="waves-effect waves-grey"
                               routerLink="{{child.url}}"
                               routerLinkActive="active" (click)="clickLink()">
-                                <i class="material-icons">cloud</i> {{child.name}}
+                                {{child.name}}
                               </a>
                           </li>
                       </ul>
