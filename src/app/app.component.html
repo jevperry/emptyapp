@@ -41,7 +41,7 @@
       </div>
     </div>
   </div>
-  <ul id="nav-mobile" class="side-nav fixed">
+  <ul id="nav-mobile" class="side-nav fixed" >
       <li class="logo">
           <a id="logo-container" href="http://materializecss.com/" class="brand-logo">
               <object id="front-page-logo" type="image/svg+xml" data="assets/materialize.svg">Your browser does not support SVG</object>
@@ -54,144 +54,47 @@
               <div class="search-results"></div>
           </div>
       </li>
-      <li class="bold">
-          <a href="about.html" class="waves-effect waves-teal">About</a>
-      </li>
-      <li class="bold">
-          <a href="getting-started.html" class="waves-effect waves-teal">Getting Started</a>
-      </li>
+
+      <!-- <li class="bold" *ngFor="let item of nav">
+        <a class="waves-effect waves-teal"
+        routerLink="{{item.url}}/profile"
+        routerLinkActive="active" (click)="clickLink()">
+          <i class="material-icons">cloud</i> {{item.name}}
+        </a>
+      </li> -->
+
       <li class="no-padding">
           <ul class="collapsible collapsible-accordion">
-              <li class="bold">
-                  <a class="collapsible-header  waves-effect waves-teal">CSS</a>
+              <li class="bold" *ngFor="let item of nav">
+
+                  <a *ngIf="item.url" class="waves-effect waves-teal"
+                  routerLink="{{item.url}}"
+                  routerLinkActive="active" (click)="clickLink()">
+                    <i class="material-icons">cloud</i> {{item.name}}
+                  </a>
+
+                  <a *ngIf="item.flavour == 'tabbed-panel'" class="waves-effect waves-teal"
+                    (click)="clickLink()">
+                    <i class="material-icons">cloud</i> {{item.name}} [tabs]
+                  </a>
+
+                  <a *ngIf="item.children" class="collapsible-header  waves-effect waves-teal">
+                    <i class="material-icons">cloud</i> {{item.name}}
+                  </a>
                   <div class="collapsible-body">
                       <ul>
-                          <li>
-                              <a href="color.html">Color</a>
-                          </li>
-                          <li>
-                              <a href="grid.html">Grid</a>
-                          </li>
-                          <li>
-                              <a href="helpers.html">Helpers</a>
-                          </li>
-                          <li>
-                              <a href="media-css.html">Media</a>
-                          </li>
-                          <li>
-                              <a href="sass.html">Sass</a>
-                          </li>
-                          <li>
-                              <a href="shadow.html">Shadow</a>
-                          </li>
-                          <li>
-                              <a href="table.html">Table</a>
-                          </li>
-                          <li>
-                              <a href="typography.html">Typography</a>
-                          </li>
-                      </ul>
-                  </div>
-              </li>
-              <li class="bold">
-                  <a class="collapsible-header  waves-effect waves-teal">Components</a>
-                  <div class="collapsible-body">
-                      <ul>
-                          <li>
-                              <a href="badges.html">Badges</a>
-                          </li>
-                          <li>
-                              <a href="buttons.html">Buttons</a>
-                          </li>
-                          <li>
-                              <a href="breadcrumbs.html">Breadcrumbs</a>
-                          </li>
-                          <li>
-                              <a href="cards.html">Cards</a>
-                          </li>
-                          <li>
-                              <a href="chips.html">Chips</a>
-                          </li>
-                          <li>
-                              <a href="collections.html">Collections</a>
-                          </li>
-                          <li>
-                              <a href="footer.html">Footer</a>
-                          </li>
-                          <li>
-                              <a href="forms.html">Forms</a>
-                          </li>
-                          <li>
-                              <a href="icons.html">Icons</a>
-                          </li>
-                          <li>
-                              <a href="navbar.html">Navbar</a>
-                          </li>
-                          <li>
-                              <a href="pagination.html">Pagination</a>
-                          </li>
-                          <li>
-                              <a href="preloader.html">Preloader</a>
-                          </li>
-                      </ul>
-                  </div>
-              </li>
-              <li class="bold">
-                  <a class="collapsible-header waves-effect waves-teal">JavaScript</a>
-                  <div class="collapsible-body">
-                      <ul>
-                          <li>
-                              <a href="carousel.html">Carousel</a>
-                          </li>
-                          <li>
-                              <a href="collapsible.html">Collapsible</a>
-                          </li>
-                          <li>
-                              <a href="dialogs.html">Dialogs</a>
-                          </li>
-                          <li>
-                              <a href="dropdown.html">Dropdown</a>
-                          </li>
-                          <li>
-                              <a href="media.html">Media</a>
-                          </li>
-                          <li>
-                              <a href="modals.html">Modals</a>
-                          </li>
-                          <li>
-                              <a href="parallax.html">Parallax</a>
-                          </li>
-                          <li>
-                              <a href="pushpin.html">Pushpin</a>
-                          </li>
-                          <li>
-                              <a href="scrollfire.html">ScrollFire</a>
-                          </li>
-                          <li>
-                              <a href="scrollspy.html">Scrollspy</a>
-                          </li>
-                          <li class="active">
-                              <a href="side-nav.html">SideNav</a>
-                          </li>
-                          <li>
-                              <a href="tabs.html">Tabs</a>
-                          </li>
-                          <li>
-                              <a href="transitions.html">Transitions</a>
-                          </li>
-                          <li>
-                              <a href="waves.html">Waves</a>
+                          <li *ngFor="let child of item.children">
+
+                              <a class="waves-effect waves-teal"
+                              routerLink="{{child.url}}"
+                              routerLinkActive="active" (click)="clickLink()">
+                                <i class="material-icons">cloud</i> {{child.name}}
+                              </a>
                           </li>
                       </ul>
                   </div>
               </li>
           </ul>
-      </li>
-      <li class="bold">
-          <a href="http://materializecss.com/mobile.html" class="waves-effect waves-teal">Mobile</a>
-      </li>
-      <li class="bold">
-          <a href="showcase.html" class="waves-effect waves-teal">Showcase</a>
       </li>
   </ul>
 
@@ -201,156 +104,3 @@
   </ul>
 
 </div>
-
-
-<!--
-<div class="navbar">
-  <nav>
-    <div class="nav-wrapper">
-      <a materialize="sideNav" [materializeParams]="[{closeOnClick1: true, draggable: true}]"
-      href="#" data-activates="side-nav-panel" class="button-collapse top-nav full hide-on-large-only">
-        <i class="material-icons">menu</i>
-      </a>
-      <a href="#" class="center" style="font-size:130%;">{{title}}</a>
-      <ul class="right">
-        <li>
-          <a class="dropdown-button" href="#" data-activates="userdropdown" data-beloworigin="true">
-            <span style="height:56px; line-height:56px;">
-              <img style="width:40px;height:40px;border-radius:50%; vertical-align:middle;"
-                  src="https://s.gravatar.com/avatar/f850593bdae3cb1c8c535b4acfdfdb98?s=80">
-            </span>
-          </a>
-        </li>
-      </ul>
-    </div>
-  </nav>
-</div>
-
-
-      <ul id='userdropdown' class='dropdown-content'>
-        <li><a (click)="toggleBanner()">Banner</a></li>
-        <li><a (click)="logout()">Logout</a></li>
-      </ul>
-
-      <div class="side-nav fixed" id="side-nav-panel">
-        <ul>
-          <li>
-            <a class="waves-effect" routerLink="/profile" routerLinkActive="active" (click)="clickLink()">
-              <i class="material-icons">cloud</i>
-              Profile
-            </a>
-          </li>
-          <li>
-            <a class="waves-effect" routerLink="/md1" routerLinkActive="active" (click)="clickLink()">
-              <i class="material-icons">cloud</i>
-              MD1
-            </a>
-          </li>
-          <li>
-            <a class="waves-effect" routerLink="/md2" routerLinkActive="active" (click)="clickLink()">
-              <i class="material-icons">cloud</i>
-              MD2
-            </a>
-          </li>
-
-          <li class="no-padding">
-              <ul class="collapsible collapsible-accordion">
-                  <li class="bold active"><a class="collapsible-header waves-effect waves-teal active">Forms</a>
-                      <div class="collapsible-body" style="display: block;">
-                          <ul>
-                            <li>
-                              <a class="waves-effect" routerLink="/md1" routerLinkActive="active" (click)="clickLink()">
-                                MD1
-                              </a>
-                            </li>
-                            <li>
-                              <a class="waves-effect" routerLink="/md2" routerLinkActive="active" (click)="clickLink()">
-                                MD2
-                              </a>
-                            </li>
-                          </ul>
-                      </div>
-                  </li>
-              </ul>
-          </li>
-          <li class="no-padding">
-              <ul class="collapsible collapsible-accordion">
-                  <li class="bold active"><a class="collapsible-header waves-effect waves-teal active">Forms</a>
-                      <div class="collapsible-body" style="display: block;">
-                          <ul>
-                            <li>
-                              <a class="waves-effect" routerLink="/md1" routerLinkActive="active" (click)="clickLink()">
-                                MD1
-                              </a>
-                            </li>
-                            <li>
-                              <a class="waves-effect" routerLink="/md2" routerLinkActive="active" (click)="clickLink()">
-                                MD2
-                              </a>
-                            </li>
-                          </ul>
-                      </div>
-                  </li>
-              </ul>
-          </li>
-
-        </ul>
-      </div>
-
-<div style="text-align:right;">
-
-  <div>1</div>
-  <div>2</div>
-  <div>3</div>
-  <div>4</div>
-  <div>5</div>
-  <div>6</div>
-  <div>7</div>
-  <div>8</div>
-  <div>9</div>
-  <div>0</div>
-  <div>1</div>
-  <div>2</div>
-  <div>3</div>
-  <div>4</div>
-  <div>5</div>
-  <div>6</div>
-  <div>7</div>
-  <div>8</div>
-  <div>9</div>
-  <div>0</div>
-  <div>1</div>
-  <div>2</div>
-  <div>3</div>
-  <div>4</div>
-  <div>5</div>
-  <div>6</div>
-  <div>7</div>
-  <div>8</div>
-  <div>9</div>
-  <div>0</div>
-  <div>1</div>
-  <div>2</div>
-  <div>3</div>
-  <div>4</div>
-  <div>5</div>
-  <div>6</div>
-  <div>7</div>
-  <div>8</div>
-  <div>9</div>
-  <div>0</div>
-  <div>1</div>
-  <div>2</div>
-  <div>3</div>
-  <div>4</div>
-  <div>5</div>
-  <div>6</div>
-  <div>7</div>
-  <div>8</div>
-  <div>9</div>
-  <div>0</div>
-<div> -->
-
-
-
-<!--  -->
