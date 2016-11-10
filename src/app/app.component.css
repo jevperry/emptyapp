@@ -16,8 +16,8 @@ ul.side-nav.fixed li.logo #logo-container:hover {
 }
 
 ul.side-nav.fixed li > a#logo-container {
-  padding-top: 9px;
-  height: 62px;
+  padding-top: 5px;
+  height: 56px;
 }
 
 ul.side-nav.fixed li > a#logo-container img {
