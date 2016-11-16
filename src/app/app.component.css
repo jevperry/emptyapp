@@ -16,7 +16,7 @@ ul.side-nav.fixed li.logo #logo-container:hover {
 }
 
 ul.side-nav.fixed li > a#logo-container {
-  padding-top: 7px;
+  padding-top: 8px;
   height: 60px;
 }
 
@@ -122,10 +122,8 @@ ul.side-nav.fixed:hover {
 }
 
 .page-toolbar > * {
-  align-items: center;
   color: black;
-  display: flex;
-  justify-content: center;
+/*   display: flex; */
   margin: 0 5px;
 }
 
@@ -139,7 +137,7 @@ ul.side-nav.fixed:hover {
   margin: 20px;
 }
 
-@media only screen and (max-width: 992px) {
+/* @media only screen and (max-width: 992px) {
   .page-toolbar, .page-main {
     margin-left: 0px;
   }
@@ -150,3 +148,4 @@ ul.side-nav.fixed:hover {
     margin-left: 270px;
   }
 }
+ */

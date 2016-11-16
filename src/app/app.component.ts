@@ -3,7 +3,6 @@ import {Component, OnInit} from '@angular/core';
 import {toast} from "angular2-materialize";
 
 import { AppService } from './app.service';
-import { BannerService } from './banner';
 import {
 
   isString
@@ -24,7 +23,6 @@ export class AppComponent implements OnInit {
 
   constructor(
     private appService: AppService,
-    private bannerService: BannerService,
   ) {
 
     appService.routeStream.subscribe(route => {
@@ -132,7 +130,7 @@ export class AppComponent implements OnInit {
   }
 
   toggleBanner() {
-    this.bannerService.toggle();
+//     this.bannerService.toggle();
   }
 
   logout() {

@@ -15,7 +15,7 @@
       "prefix": "app",
       "mobile": false,
       "styles": [ 
-        "f-layout.css",
+        "../node_modules/f-layout/dist/f-layout.min.css",
         "styles.scss"
       ],
       "scripts": [

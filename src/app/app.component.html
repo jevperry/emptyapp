@@ -1,26 +1,25 @@
-<div class="page-body f-layout f-column">
-  <div class="page-toolbar f-layout f-row f-align-center" style="">
+<div class="page-body f-column f-stretch">
+
+  <div class="page-toolbar f-row" style="">
+
     <a materialize="sideNav"
     [materializeParams]="[{draggable: true}]"
     href="#" data-activates="nav-mobile"
     class="button-collapse hide-on-large-only">
         <i class="material-icons">menu</i>
     </a>
-    <a href="#" class="f-grow f-justify-start">{{title}}</a>
 
-    <a href="#" data-activates="nav-mobile" class="">
+    <strong class="f-grow">{{title}}</strong>
+
+    <a href="#" class="">
         <i class="material-icons">email</i>
     </a>
-    <ul class="right">
-      <li>
-        <a class="dropdown-button" data-activates="userdropdown" data-beloworigin="true">
-          <span style="height:56px; line-height:56px;">
-            <img style="width:40px;height:40px;border-radius:50%; vertical-align:middle;"
-                src="https://s.gravatar.com/avatar/f850593bdae3cb1c8c535b4acfdfdb98?s=80">
-          </span>
-        </a>
-      </li>
-    </ul>
+
+    <a class="dropdown-button" data-activates="userdropdown" data-beloworigin="true">
+      <img style="width:40px;height:40px;border-radius:50%;"
+          src="https://s.gravatar.com/avatar/f850593bdae3cb1c8c535b4acfdfdb98?s=80">
+    </a>
+     
   </div>
   <div class="page-main f-grow">
     <div class="page-main-inner">
